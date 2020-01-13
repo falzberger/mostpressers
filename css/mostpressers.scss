@@ -4,7 +4,7 @@ $mostpressersGold: #F8C100;
 $mostpressersGoldDarker: #EFBC00;
 
 * {
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* creating classes for Google Font "Permanent Marker" */
@@ -42,7 +42,7 @@ background with black font-color when scrolling. */
 }
 
 .navbar-brand {
-  background-color: rgba(255,255,255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 13px;
   padding: .5rem .5rem;
 }
@@ -56,8 +56,8 @@ background with black font-color when scrolling. */
   color: rgba(255, 255, 255, 0.95);
 }
 
-.navbar-light .navbar-toggler-icon{
-background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-light .navbar-toggler {
@@ -73,7 +73,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 .white .navbar-nav .nav-link {
-  color: rgba(0,0,0,0.6) !important;
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 
 .white .navbar-brand {
@@ -81,17 +81,17 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
   transition: .5s;
 }
 
-.navbar-light.white .navbar-toggler-icon{
-background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 30, 30, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+.navbar-light.white .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 30, 30, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-light.white .navbar-toggler {
-  color: rgba(30,30,30, 0.9);
-  border-color: rgba(30,30,30, 0.1);
+  color: rgba(30, 30, 30, 0.9);
+  border-color: rgba(30, 30, 30, 0.1);
 }
 
 /* styling Font Awesome Logos in Header for different viewports */
-@media (max-width: 575.98px){
+@media (max-width: 575.98px) {
   .navbar .fab {
     font-size: 1.5rem !important;
     margin: 0 !important;
@@ -101,19 +101,19 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
   }
   /* use navbar with white class and add padding to top of body to avoid overlapping */
   body {
-    padding-top:58px;
+    padding-top: 58px;
   }
 }
 
 /* a bit different styling for social media symbols on big screens*/
-@media (min-width:1200px){
+@media (min-width: 1200px) {
   .fab {
     font-size: 2.4em !important;
     letter-spacing: 15px;
   }
 }
 
-.navbar .fab{
+.navbar .fab {
   color: $mostpressersGold;
   float: left;
 }
@@ -134,8 +134,8 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 
 .carousel-inner .carousel-item:nth-child(1) .carousel-text h3 {
   position: absolute;
-  bottom: 35% ;
-  left: 15% ;
+  bottom: 35%;
+  left: 15%;
   display: block;
   font-family: "Permanent Marker", cursive;
   font-size: 13vw;
@@ -156,7 +156,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 
 .carousel-inner .carousel-item:nth-child(2) .carousel-text {
   position: absolute;
-  top:15%;
+  top: 15%;
   bottom: 60%;
   left: 40%;
   margin-right: 10%;
@@ -167,11 +167,11 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
   top: 50%;
   left: 30%;
   margin-right: 25%;
-  text-align:center;
+  text-align: center;
 }
 
 /* captions a bit bigger on xl screens */
-@media (min-width:1200px){
+@media (min-width: 1200px) {
   .carousel-inner .carousel-item .carousel-text h4 {
     font-size: 25px;
   }
@@ -199,7 +199,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
   position: relative;
   margin-top: 1rem;
   margin-right: 1rem;
-  right: 0vw;
+  right: 0;
 }
 
 .carousel-inner .carousel-item:nth-child(3) .carousel-text a {
@@ -213,7 +213,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 .jumbotron div h3 {
-  font-family: "Permanent Marker",cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 /* styling for Medien */
@@ -256,7 +256,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
   margin-top: 1rem;
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
   #Mitglieder .row .col-12 .img-thumbnail {
     max-width: 300px;
     text-align: center;
@@ -266,15 +266,15 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 
 }
 
-@media (min-width:576px) {
-/*make order on medium devices always picture - text- picture - text ...*/
-#Mitglieder .row:nth-child(2n) .col-12:nth-child(2n+1) {
-  order: 2;
-}
+@media (min-width: 576px) {
+  /*make order on medium devices always picture - text- picture - text ...*/
+  #Mitglieder .row:nth-child(2n) .col-12:nth-child(2n+1) {
+    order: 2;
+  }
 
 }
 
-@media (max-width:375px) {
+@media (max-width: 375px) {
   #Mitglieder h1 {
     text-align: center;
   }
@@ -300,49 +300,68 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 
 .table {
   max-width: 100vw;
-  border-color: rgba(255,255,255,0.9);
+  border-color: rgba(255, 255, 255, 0.9);
   margin-bottom: 0;
   padding-bottom: 2rem;
   line-height: 1.8;
+
+  thead tr.collapsed .fa {
+    transform: rotate(-90deg);
+  }
+
   thead th {
     font-size: 140%;
     margin-top: 10px;
     text-align: center;
-    border-top: 0px;
-    border-bottom: 2px solid rgba(255,255,255,0.9);
-  }
-  th {
-    border-color: rgba(255,255,255,0.9);
-    width: 25%;
-  }
-  tr td {
-    border-color: rgba(255,255,255,0.9);
-    &:nth-child(2) {
-      width: 35%;
+    border-top: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+
+    .fa {
+      transition: .3s transform ease-in-out;
+      text-shadow: 1px 1px 1px #ccc;
+      font-size: 0.8em;
     }
-    &:nth-child(3) {
+  }
+
+  tr, tr:hover {
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
+
+    th {
+      width: 25%;
     }
-    &:nth-child(4) {
-      width: 20px;
+
+    td {
+      &:nth-child(2) {
+        width: 35%;
+      }
+
+      &:nth-child(3) {
+      }
+
+      &:nth-child(4) {
+        width: 20px;
+      }
     }
   }
 }
 
+
 /* adjust table on small devices */
-@media (max-width: 575.98px){
+@media (max-width: 575.98px) {
   .table tbody tr > * {
     display: inline;
-    border: 0px;
+    border: 0;
     padding: .75rem 0;
   }
   .table tbody tr {
-    text-align:center;
-    border-bottom: 1px solid rgba(255,255,255,0.9);
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
   }
   .table tbody td::before {
     content: " | ";
     display: inline;
-    vertical-align:baseline ;
+    vertical-align: baseline;
   }
 }
 
@@ -353,7 +372,10 @@ tr.clickable-row {
 
 /* Parallax Effect for Kontakt and its styling */
 #Kontakt {
-  &:hover {color: #aaa;}
+  &:hover {
+    color: #aaa;
+  }
+
   background-image: url("../img/mostpressers_hinten_1920.jpg");
   height: 35rem;
   background-attachment: fixed;
@@ -362,16 +384,20 @@ tr.clickable-row {
   background-repeat: no-repeat;
   padding-top: 9rem;
   line-height: 1.6;
+
   p {
     font-weight: 700;
+
     span {
       margin-right: 0.5rem;
     }
   }
+
   h5 {
     font-weight: 700;
     margin-bottom: 1rem;
   }
+
   a {
     color: #FFF;
   }
@@ -393,13 +419,18 @@ footer {
   background-color: #f7f7f7;
   color: #aaa;
   border-top: 1px solid #e0e0e0;
-  text-align:center;
+  text-align: center;
+
   p {
     padding: 15px 0;
     font-size: 0.7rem;
     margin-bottom: 0;
+
     a {
-      &:hover {color: #0a0a0a;}
+      &:hover {
+        color: #0a0a0a;
+      }
+
       color: #0a0a0a;
     }
   }
