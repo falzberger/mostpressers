@@ -2,9 +2,9 @@
 var tag = document.createElement('script');
 
 // calculate size of iframe
-var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-w -= 50;
-var h = w * 9 / 16;
+let h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+h -= 100;
+let w = h * 16 / 9;
 
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -26,9 +26,9 @@ function onYouTubeIframeAPIReady() {
 }
 
 // 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
+function onPlayerReady() {
   player.loadPlaylist({
     list: 'PLYiypSXRnsMrhMqELv9y1ukaCvphjy1vP'
   });
-  event.target.playVideo();
+  // function for autoplay: event.target.playVideo();
 }

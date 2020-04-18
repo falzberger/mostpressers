@@ -37,9 +37,13 @@ h1 {
 
 /* use navbar which transforms, starting with white font-color, transforming to white
 background with black font-color when scrolling. */
-.navbar-nav .nav-link {
-  font-weight: 400;
-  letter-spacing: .1rem;
+.navbar-nav {
+  max-height: 100px;
+
+  .nav-link {
+    font-weight: 400;
+    letter-spacing: .1rem;
+  }
 }
 
 .navbar-light {
@@ -53,6 +57,8 @@ background with black font-color when scrolling. */
 }
 
 .navbar-brand img {
+  max-height: 80px;
+  max-width: 240px;
   width: 20vw;
   vertical-align: middle;
 }
