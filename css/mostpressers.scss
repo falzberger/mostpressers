@@ -340,10 +340,12 @@ background with black font-color when scrolling. */
     border-color: rgba(255, 255, 255, 0.9) !important;
 
     th {
+      position:relative; // for .strikeout
       width: 25%;
     }
 
     td {
+      position:relative; // for .strikeout
       &:nth-child(2) {
         width: 35%;
       }
@@ -356,6 +358,15 @@ background with black font-color when scrolling. */
       }
     }
   }
+}
+
+tr.strikeout td:before, tr.strikeout th:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 8px solid #1113;
+  width: 100%;
 }
 
 
