@@ -250,22 +250,29 @@ background with black font-color when scrolling. */
   height: 700px;
   display: flex;
   align-items: center;
+
   div ul .referral {
     display: none;
   }
 }
 
 /* instrument icons in memberAccordion */
-.card-header img {
-  width: 3rem;
-  max-width: 32px;
-  height: auto;
-  margin-right: 1rem;
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 1em 2.5em;
+  img {
+    width: 3rem;
+    max-width: 32px;
+    height: auto;
+    margin-right: 1rem;
+  }
 }
 
 /* styling memberAccordion */
 #Mitglieder p {
   text-align: justify;
+  line-height: 1.8;
 }
 
 #Termine, #Mitglieder {
@@ -277,13 +284,22 @@ background with black font-color when scrolling. */
 }
 
 @media (max-width: 576px) {
-  #Mitglieder .row .col-12 .img-thumbnail {
-    max-width: 300px;
-    text-align: center;
-    align-items: center;
-    align-content: center;
+  #Mitglieder {
+    padding-left: 0;
+    padding-right: 0;
   }
-
+  #Mitglieder .row .col-12 .img-thumbnail {
+    width: 100%;
+  }
+  #Mitglieder .card-header {
+    justify-content: center;
+  }
+  #Mitglieder .btn span {
+    display: none;
+  }
+  #Mitglieder h3 {
+    text-align: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -291,21 +307,7 @@ background with black font-color when scrolling. */
   #Mitglieder .row:nth-child(2n) .col-12:nth-child(2n+1) {
     order: 2;
   }
-
 }
-
-@media (max-width: 375px) {
-  #Mitglieder h1 {
-    text-align: center;
-  }
-  #Mitglieder .btn span {
-    display: none;
-  }
-  #Mitglieder h5 {
-    text-align: center;
-  }
-}
-
 
 /* different design for Termine section */
 #Termine {
@@ -349,12 +351,12 @@ background with black font-color when scrolling. */
     border-color: rgba(255, 255, 255, 0.9) !important;
 
     th {
-      position:relative; // for .strikeout
+      position: relative; // for .strikeout
       width: 25%;
     }
 
     td {
-      position:relative; // for .strikeout
+      position: relative; // for .strikeout
       &:nth-child(2) {
         width: 35%;
       }
@@ -487,24 +489,25 @@ footer {
     animation-duration: 4s;
     animation-direction: alternate;
 
-    position:absolute;
-    left:15px; // the padding added in bootstrap columns
-    height:100%;
+    position: absolute;
+    left: 15px; // the padding added in bootstrap columns
+    height: 100%;
+    width: auto !important;
   }
 }
 
 @keyframes FadeInOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   45% {
-    opacity:1;
+    opacity: 1;
   }
   55% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
