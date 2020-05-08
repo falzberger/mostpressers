@@ -246,6 +246,15 @@ background with black font-color when scrolling. */
   margin-bottom: 10px;
 }
 
+#Juicer {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  div ul .referral {
+    display: none;
+  }
+}
+
 /* instrument icons in memberAccordion */
 .card-header img {
   width: 3rem;
