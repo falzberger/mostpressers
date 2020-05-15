@@ -1,0 +1,526 @@
+@import "~bootstrap/scss/bootstrap";
+
+// Custom Stylesheet for the mostpressers-Website, overwriting the Bootstrap CSS
+
+$mostpressersGold: #F8C100;
+$mostpressersGoldDarker: #EFBC00;
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* creating classes for Google Font "Permanent Marker" */
+.permanent {
+  font-family: "Permanent Marker", cursive;
+}
+
+.permanent-gold {
+  font-family: "Permanent Marker", cursive;
+  color: $mostpressersGold;
+}
+
+.permanent-black {
+  font-family: "Permanent Marker", cursive;
+  color: #000000;
+}
+
+/* a class for making the cursor to a pointer */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* styling all headers in type h1 */
+h1 {
+  padding-top: 1.8rem;
+  font-family: "Permanent Marker", cursive;
+  color: $mostpressersGold;
+  padding-bottom: 1.2rem;
+}
+
+/* use navbar which transforms, starting with white font-color, transforming to white
+background with black font-color when scrolling. */
+.navbar-nav {
+  max-height: 100px;
+
+  .nav-link {
+    font-weight: 400;
+    letter-spacing: .1rem;
+  }
+}
+
+.navbar-light {
+  transition: .5s;
+}
+
+.navbar-brand {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 13px;
+  padding: .5rem .5rem;
+}
+
+.navbar-brand img {
+  max-height: 80px;
+  max-width: 240px;
+  width: 20vw;
+  vertical-align: middle;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* white-class is added to nav with jQuery when website is not on top */
+.white {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid $mostpressersGold;
+  transition: .5s;
+}
+
+.white .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.white .navbar-brand {
+  background-color: transparent;
+  transition: .5s;
+}
+
+.navbar-light.white .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 30, 30, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-light.white .navbar-toggler {
+  color: rgba(30, 30, 30, 0.9);
+  border-color: rgba(30, 30, 30, 0.1);
+}
+
+/* styling Font Awesome Logos in Header for different viewports */
+@media (max-width: 575.98px) {
+  .navbar .fab {
+    font-size: 1.5rem !important;
+    margin: 0 !important;
+  }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  /* use navbar with white class and add padding to top of body to avoid overlapping */
+  body {
+    padding-top: 58px;
+  }
+}
+
+/* a bit different styling for social media symbols on big screens*/
+@media (min-width: 1200px) {
+  .fab {
+    font-size: 2.4em !important;
+    letter-spacing: 15px;
+  }
+}
+
+.navbar .fab {
+  color: $mostpressersGold;
+  float: left;
+}
+
+/* assigning carousel-item a fixed number to work with percentages */
+.carousel-item img {
+  display: block !important;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* styling Carousel Captions and Buttons*/
+.carousel-text {
+  color: #FFFFFF;
+  z-index: 20;
+}
+
+.carousel-inner .carousel-item:nth-child(1) .carousel-text h3 {
+  position: absolute;
+  bottom: 35%;
+  left: 15%;
+  display: block;
+  font-family: "Permanent Marker", cursive;
+  font-size: 13vw;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+.carousel-inner .carousel-item .carousel-text h4 {
+  font-size: 20px;
+}
+
+.carousel-inner .carousel-item:nth-child(1) .carousel-text h4 {
+  position: absolute;
+  top: 45%;
+  left: 64%;
+  margin-right: 10%;
+}
+
+.carousel-inner .carousel-item:nth-child(2) .carousel-text {
+  position: absolute;
+  top: 15%;
+  bottom: 60%;
+  left: 40%;
+  margin-right: 10%;
+}
+
+.carousel-inner .carousel-item:nth-child(3) .carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+/* captions a bit bigger on xl screens */
+@media (min-width: 1200px) {
+  .carousel-inner .carousel-item .carousel-text h4 {
+    font-size: 25px;
+  }
+}
+
+/* color style of buttons in carousel */
+.btn-gold {
+  color: #FFFFFF;
+  background-color: $mostpressersGold;
+  border-color: $mostpressersGold;
+}
+
+.btn-gold:hover {
+  color: #FFFFFF;
+  background-color: $mostpressersGold;
+  cursor: pointer;
+}
+
+.btn-gold:focus, .btn-gold.focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+/* positions of carousel-buttons */
+.carousel-inner .carousel-item:nth-child(2) .carousel-text a {
+  position: relative;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  right: 0;
+}
+
+.carousel-inner .carousel-item:nth-child(3) .carousel-text a {
+  margin-top: 1rem;
+}
+
+/* cutting off margin in jumbotron on md and sm screens*/
+.jumbotron {
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+.jumbotron div h3 {
+  font-family: "Permanent Marker", cursive;
+}
+
+/* styling for Medien */
+#Medien {
+  background-color: #666;
+  color: #fff;
+  padding-bottom: 2rem;
+
+  h1 {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .yt-player {
+    margin: 1em;
+  }
+}
+
+#Juicer {
+  height: 700px;
+  display: flex;
+  align-items: center;
+
+  div ul .referral {
+    display: none;
+  }
+}
+
+/* instrument icons in memberAccordion */
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 1em 2.5em;
+
+  img {
+    width: 3rem;
+    max-width: 32px;
+    height: auto;
+    margin-right: 1rem;
+  }
+}
+
+/* styling memberAccordion */
+#Mitglieder p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+#Termine, #Mitglieder {
+  padding-bottom: 2.5rem;
+}
+
+#Mitglieder .row div h3.permanent-black {
+  margin-top: 1rem;
+}
+
+@media (max-width: 576px) {
+  #Mitglieder {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #Mitglieder .row .col-12 .img-thumbnail {
+    width: 100%;
+  }
+  #Mitglieder .card-header {
+    justify-content: center;
+  }
+  #Mitglieder .btn span {
+    display: none;
+  }
+  #Mitglieder h3 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  /*make order on medium devices always picture - text- picture - text ...*/
+  #Mitglieder .row:nth-child(2n) .col-12:nth-child(2n+1) {
+    order: 2;
+  }
+}
+
+/* different design for Termine section */
+#Termine {
+  background-color: $mostpressersGoldDarker;
+  color: #fff;
+}
+
+#Termine h1 {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.table {
+  max-width: 100vw;
+  border-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  line-height: 1.8;
+
+  thead tr.collapsed .fa {
+    transform: rotate(-90deg);
+  }
+
+  thead th {
+    font-size: 140%;
+    margin-top: 10px;
+    text-align: center;
+    border-top: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+
+    .fa {
+      transition: .3s transform ease-in-out;
+      text-shadow: 1px 1px 1px #ccc;
+      font-size: 0.8em;
+    }
+  }
+
+  tr, tr:hover {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
+
+    th {
+      position: relative; // for .strikeout
+      width: 25%;
+    }
+
+    td {
+      position: relative; // for .strikeout
+      &:nth-child(2) {
+        width: 35%;
+      }
+
+      &:nth-child(3) {
+      }
+
+      &:nth-child(4) {
+        width: 20px;
+      }
+    }
+  }
+}
+
+tr.strikeout td:before, tr.strikeout th:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 8px solid #1113;
+  width: 100%;
+}
+
+
+/* adjust table on small devices */
+@media (max-width: 575.98px) {
+  .table tbody tr > * {
+    display: inline;
+    border: 0;
+    padding: .75rem 0;
+  }
+  .table tbody tr {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  }
+  .table tbody td::before {
+    content: " | ";
+    display: inline;
+    vertical-align: baseline;
+  }
+}
+
+/* make table-rows clickable (see mostpressers.js) */
+tr.clickable-row {
+  cursor: pointer;
+}
+
+/* Parallax Effect for Kontakt and its styling */
+#Kontakt {
+  &:hover {
+    color: #aaa;
+  }
+
+  background-image: url("/img/mostpressers_freigestellt.jpg");
+  height: 35rem;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 9rem;
+  line-height: 1.6;
+
+  p {
+    font-weight: 700;
+
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+
+  h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: #FFF;
+  }
+}
+
+#Kontakt > *, #Kontakt .fas {
+  margin-top: 0;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: sub;
+}
+
+#Kontakt .fas {
+  font-size: 1.5rem;
+}
+
+/* styling of page footer */
+footer {
+  background-color: #f7f7f7;
+  color: #aaa;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+
+  p {
+    padding: 15px 0;
+    font-size: 0.7rem;
+    margin-bottom: 0;
+
+    a {
+      &:hover {
+        color: #0a0a0a;
+      }
+
+      color: #0a0a0a;
+    }
+  }
+}
+
+/****************/
+/* MEMBER IMAGE */
+/****************/
+.member-image {
+
+  img {
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
+  }
+
+  img:nth-child(2) {
+    animation-name: FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+
+    position: absolute;
+    left: 15px; // the padding added in bootstrap columns
+    height: 100%;
+    width: auto !important;
+  }
+}
+
+@keyframes FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* headers for Impressum-Page */
+
+#Impressum h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
