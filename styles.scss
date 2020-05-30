@@ -1,5 +1,3 @@
-@import "~bootstrap/scss/bootstrap";
-
 // Custom Stylesheet for the mostpressers-Website, overwriting the Bootstrap CSS
 
 $mostpressersGold: #F8C100;
@@ -142,7 +140,6 @@ background with black font-color when scrolling. */
 /* styling Carousel Captions and Buttons*/
 .carousel-text {
   color: #FFFFFF;
-  z-index: 20;
 }
 
 .carousel-inner .carousel-item:nth-child(1) .carousel-text h3 {
@@ -169,17 +166,16 @@ background with black font-color when scrolling. */
 
 .carousel-inner .carousel-item:nth-child(2) .carousel-text {
   position: absolute;
-  top: 15%;
-  bottom: 60%;
+  top: 60%;
   left: 40%;
-  margin-right: 10%;
+  margin-right: 15%;
 }
 
 .carousel-inner .carousel-item:nth-child(3) .carousel-text {
   position: absolute;
-  top: 50%;
-  left: 30%;
-  margin-right: 25%;
+  top: 20%;
+  left: 60%;
+  margin-right: 10%;
   text-align: center;
 }
 
@@ -415,7 +411,7 @@ tr.clickable-row {
     color: #aaa;
   }
 
-  background-image: url("/img/mostpressers_freigestellt.jpg");
+  background-image: url("/img/mostpressers1.jpeg");
   height: 35rem;
   background-attachment: fixed;
   background-size: cover;
