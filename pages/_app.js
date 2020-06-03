@@ -56,11 +56,11 @@ function MyApp({Component, pageProps}) {
                                 <li className="nav-item" key={"mitglieder"}>
                                     <a className="nav-link" href="#Mitglieder">Mitglieder</a>
                                 </li>
-                                <li className="nav-item" key={"termine"}>
-                                    <a className="nav-link" href="#Termine">Termine</a>
-                                </li>
                                 <li className="nav-item" key={"kontakt"}>
                                     <a className="nav-link" href="#Kontakt">Kontakt</a>
+                                </li>
+                                <li className="nav-item" key={"termine"}>
+                                    <a className="nav-link" href="#Termine">Termine</a>
                                 </li>
                             </ul>
                         </div>
@@ -74,7 +74,7 @@ function MyApp({Component, pageProps}) {
 
             <footer>
                 <div className="container-fluid">
-                    <p>&copy; 2017 - 2020 Most Pressers || <a href="impressum">Impressum und Haftungsausschluss</a>
+                    <p>&copy; 2017 - 2020 Most Pressers || <a href="impressum.html">Impressum und Haftungsausschluss</a>
                     </p>
                 </div>
             </footer>
