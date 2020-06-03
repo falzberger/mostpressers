@@ -29,13 +29,13 @@ export default function Home(props: any) {
     //@ts-ignore
     return (
         <div>
-            <div id="startCarousel" className="carousel slide" data-ride="carousel">
+            <div id="startCarousel" className="carousel slide carousel-fade" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#startCarousel" data-slide-to="0" className="active"/>
                     <li data-target="#startCarousel" data-slide-to="1"/>
                     <li data-target="#startCarousel" data-slide-to="2"/>
                 </ol>
-                <div className="carousel-inner" role="listbox">
+                <div className="carousel-inner" role="listbox" data-interval={2500}>
                     <div className="carousel-item active">
                         <img
                             className="d-block w-100"
@@ -48,7 +48,7 @@ export default function Home(props: any) {
                             <h4 className="d-none d-sm-block"> Willkommen bei den Most Pressers! </h4>
                         </div>
                     </div>
-                    <div className="carousel-item">
+                    <div className="carousel-item" data-interval={8000}>
                         <img
                             className="d-block w-100"
                             srcSet={marchtrenk2.srcSet}
@@ -63,7 +63,7 @@ export default function Home(props: any) {
                             <a className="btn btn-gold" href="#Medien" role="button">Medien</a>
                         </div>
                     </div>
-                    <div className="carousel-item">
+                    <div className="carousel-item" data-interval={8000}>
                         <img
                             className="d-block w-100"
                             srcSet={marchtrenk3.srcSet}
@@ -101,7 +101,7 @@ export default function Home(props: any) {
 
             <div className="container-fluid" id="Medien">
                 <div className="container">
-                    <h1 className="text-center">Medien</h1>
+                    <h2 className="permanent color-gold text-center">Medien</h2>
                     <div className="yt-player" id="player1"/>
                     <div className="yt-player" id="player2"/>
                     <div className="yt-player" id="player3"/>
@@ -119,51 +119,63 @@ export default function Home(props: any) {
                 </div>
             </div>
 
-            <div className="container-fluid" id="Mitglieder">
+            <div className="parallax">
+                <div className="container-fluid" id="Mitglieder">
+                    <div className="container">
+                        <h2 className="permanent color-gold text-center">Mitglieder</h2>
+                        <div id="memberAccordion">
+                            {props.members.groups.map((group: any) =>
+                                <div className="card">
+                                    <div id={`heading${group.id}`} className="card-header btn btn-light collapsed"
+                                         data-toggle="collapse" data-target={`#collapse${group.id}`}
+                                         aria-expanded="false" aria-controls={`collapse${group.id}`}>
+                                        <img src={require(`../public/img/icons/${group.id}.png`)} alt={group.title}/>
+                                        <span>{group.title}</span>
+                                    </div>
 
-                <div className="container">
-                    <h1 className="text-center">Mitglieder</h1>
-                    <div id="memberAccordion">
-                        {props.members.groups.map((group: any) =>
-                            <div className="card">
-                                <div id={`heading${group.id}`} className="card-header btn btn-light collapsed"
-                                     data-toggle="collapse" data-target={`#collapse${group.id}`}
-                                     aria-expanded="false" aria-controls={`collapse${group.id}`}>
-                                    <img src={require(`../public/img/icons/${group.id}.png`)} alt={group.title}/>
-                                    <span>{group.title}</span>
-                                </div>
 
-
-                                <div id={`collapse${group.id}`} className="collapse"
-                                     aria-labelledby={`heading${group.id}`}>
-                                    <div className="card-body">
-                                        <div className="container-fluid">
-                                            {group.members.map((member: any) =>
-                                                <div className="row align-items-center">
-                                                    <div className="member-image col-12 col-lg-3 col-md-4 col-sm-5">
-                                                        <img className="img-thumbnail" alt={`${member.name} ernst`}
-                                                             src={require(`../public/img/members/${member.id}1.jpeg`)}/>
-                                                        <img className="img-thumbnail" alt={`${member.name} lustig`}
-                                                             src={require(`../public/img/members/${member.id}2.jpeg`)}/>
+                                    <div id={`collapse${group.id}`} className="collapse"
+                                         aria-labelledby={`heading${group.id}`}>
+                                        <div className="card-body">
+                                            <div className="container-fluid">
+                                                {group.members.map((member: any) =>
+                                                    <div className="row align-items-center" key={member.id}>
+                                                        <div className="member-image col-12 col-lg-3 col-md-4 col-sm-5">
+                                                            <img className="img-thumbnail" alt={`${member.name} ernst`}
+                                                                 src={require(`../public/img/members/${member.id}1.jpeg`)}/>
+                                                            <img className="img-thumbnail" alt={`${member.name} lustig`}
+                                                                 src={require(`../public/img/members/${member.id}2.jpeg`)}/>
+                                                        </div>
+                                                        <div className="col-12 col-lg-9 col-md-8 col-sm-7">
+                                                            <h3 className="permanent color-black mt-4">{member.name}</h3>
+                                                            <p>{member.description}</p>
+                                                        </div>
                                                     </div>
-                                                    <div className="col-12 col-lg-9 col-md-8 col-sm-7">
-                                                        <h3 className="permanent-black">{member.name}</h3>
-                                                        <p>{member.description}</p>
-                                                    </div>
-                                                </div>
-                                            )}
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Kontakt">
+                    <div className={"textfield"}>
+                        <h2 className={"permanent text-center"}>Kontakt</h2>
+                        <div>Josef Söllinger</div>
+                        <div><i className="fa fas fa-phone"/> +43 (0) 699 110 543 98</div>
+                        <div><a href="mailto:mail@mostpressers.at"> <i
+                            className="fa fas fa-envelope"/> mail@mostpressers.at
+                        </a></div>
                     </div>
                 </div>
             </div>
 
             <div className="container-fluid" id="Termine">
                 <div className="container">
-                    <h1>Termine</h1>
+                    <h2 className={"permanent text-center"}>Termine</h2>
                     <table className="table table-hover">
                         <thead>
                         <tr>
@@ -400,14 +412,6 @@ export default function Home(props: any) {
                         </tbody>
                     </table>
                 </div>
-            </div>
-
-            <div id="Kontakt">
-                <h1>Kontakt</h1>
-                <h5>Josef Söllinger</h5>
-                <p><span className="fas fa-phone"/> +43 (0) 699 110 543 98</p>
-                <p><a href="mailto:mail@mostpressers.at"> <span className="fas fa-envelope"/> mail@mostpressers.at
-                </a></p>
             </div>
         </div>
     );

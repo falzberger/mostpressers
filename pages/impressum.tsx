@@ -2,13 +2,13 @@ export default function Impressum(props: any) {
     return (
         <div className="container" id="Impressum">
             <h1>Impressum</h1>
-            <h2>Medieninhaber, Herausgeber und Eigentümer</h2>
-            <h2>Konzeption und Design </h2>
+            <h2>Medieninhaber und Design </h2>
             <p>Alexander Falzberger</p>
             <p>mail@mostpressers.at</p>
 
-            <h2>Bilder</h2>
-            <p>David Aschauer, Alexander Falzberger</p>
+            <h2>Medien</h2>
+            <p>Fotos von Jana Zellinger und <a href={"http://www.tom-nena.com/"}>Tom &amp; Nena Fotografie</a></p>
+            <p>Videos von David Aschauer</p>
             <p>Icons made by Smashicons, Freepik, Roundicons, Nikita Golubev and Pixel perfect from www.flaticon.com</p>
 
             <h1>Haftungsausschluss</h1>

@@ -29,15 +29,15 @@ function MyApp({Component, pageProps}) {
             <header>
                 <div className="container-fluid" id="top">
                     <nav className="navbar navbar-expand-lg fixed-top navbar-light white-sm">
-                        <a className="navbar-brand" href="#top">
-                            <img src={require(`../public/img/logo_transparent.png`)} alt="Most Pressers Logo"/>
+                        <a className="navbar-brand" href="/#top">
+                            <img src={require(`../public/img/logo_transparent_small.png`)} alt="Most Pressers Logo"/>
                         </a>
 
                         <a role="button" href="https://www.facebook.com/mostPressers" target="_blank">
-                            <span className="fab fa-facebook-square fa-2x ml-2"/>
+                            <i className="fa fab fa-facebook-square fa-2x ml-2"/>
                         </a>
                         <a role="button" href="https://www.instagram.com/mostpressers/" target="_blank">
-                            <span className="fab fa-instagram fa-2x ml-3 mr-auto"/>
+                            <i className="fa fab fa-instagram fa-2x ml-3 mr-auto"/>
                         </a>
 
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerNav"
