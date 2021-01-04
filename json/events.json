@@ -1,0 +1,58 @@
+{
+  "events": [
+    {
+      "date": "2021-10-03",
+      "title": "leben.blasmusik.festival",
+      "location": "4710 Grieskirchen",
+      "link": "https://leben-blasmusik-festival.at"
+    },
+    {
+      "date": "2021-09-11",
+      "title": "7. Südtiroler Festival der Blasmusik",
+      "location": "IT - 39037 Mühlbach",
+      "link": "https://www.egerlaender-blasmusik.com/index.php?target=SUEDFEST&inc=MAINNAVINC&section=SEC001"
+    },
+    {
+      "date": "2021-09-04",
+      "title": "Jubiläumsfest Kirchschlag",
+      "location": "4202 Kirchschlag bei Linz",
+      "link": "#"
+    },
+    {
+      "date": "2021-07-15",
+      "title": "Mid Europe",
+      "location": "8970 Schladming",
+      "link": "https://mideurope.at/"
+    },
+    {
+      "date": "2021-06-26",
+      "title": "Bezirksmusikfest Urfahr-Umgebung",
+      "location": "4221 Steyregg",
+      "link": "https://bmf2020steyregg.at/"
+    },
+    {
+      "date": "2021-06-18",
+      "title": "Bezirksmusikfest Wels-Land",
+      "location": "4611 Buchkirchen",
+      "link": "https://www.bmf-buchkirchen.at/"
+    },
+    {
+      "date": "2021-05-19",
+      "title": "MozFest 2021",
+      "location": "5020 Salzburg",
+      "link": ""
+    },
+    {
+      "date": "2021-05-15",
+      "title": "70 Jahre Bezirkslandjugend Urfahr-Umgebung",
+      "location": "4180 Sonnberg",
+      "link": "https://bezirkurfahr.landjugend.at/news/artikel/n/70-jahre-jubilaeum-landjugend-uu-2349/seite/1"
+    },
+    {
+      "date": "2021-04-23",
+      "title": "Maitanz Altenhof",
+      "location": "4674 Altenhof",
+      "link": "http://www.mv-altenhof.at/"
+    }
+  ]
+}

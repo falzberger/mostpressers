@@ -11,15 +11,15 @@ export const getStaticProps: GetStaticProps = async _context => {
     const jsonDirectory = path.join(process.cwd(), 'json')
 
     const membersPath = path.join(jsonDirectory, 'members.json');
-    const members = fs.readFileSync(membersPath, 'utf-8');
+    const members = JSON.parse(fs.readFileSync(membersPath, 'utf-8'));
 
-    // const datesPath = path.join(jsonDirectory, 'dates.json');
-    // const dates = fs.readFileSync(datesPath, 'utf-8');
+    const eventsPath = path.join(jsonDirectory, 'events.json');
+    let events = JSON.parse(fs.readFileSync(eventsPath, 'utf-8'));
 
     return {
         props: {
-            members: JSON.parse(members),
-            // dates: JSON.parse(dates)
+            members: members,
+            events: events
         } // will be passed to the page component as props
     };
 };
@@ -179,10 +179,47 @@ export default function Home(props: any) {
                     <table className="table table-hover">
                         <thead>
                         <tr>
-                            <th colSpan={4}>2020</th>
+                            <th colSpan={4}>2021</th>
                         </tr>
                         </thead>
                         <tbody>
+                        {// replace each event's date with a Date object
+                            props.events.events
+                                .map((event: any) => (
+                                    {
+                                        ...event,
+                                        date: new Date(parseInt(event.date.slice(0, 4)), parseInt(event.date.slice(5, 7)) - 1, parseInt(event.date.slice(8, 10)))
+                                    }
+                                ))
+                                .sort(((e1: any, e2: any) => e1.date.toISOString().localeCompare(e2.date.toISOString())))
+                                .map((event: any) =>
+                                    <tr className="clickable-row" data-href={event.link}
+                                        key={`${event.date}-${event.title}`}>
+                                        <th scope="row">{event.date.toLocaleString('de-DE', {
+                                            weekday: 'long',
+                                            month: 'long',
+                                            day: 'numeric'
+                                        })}</th>
+                                        <td>{event.title}</td>
+                                        <td>{event.location}</td>
+                                        <td className="table-link">Mehr</td>
+                                    </tr>
+                                )}
+                        </tbody>
+                    </table>
+
+                    <table className="table table-hover">
+                        <thead>
+                        <tr className="cursor-pointer collapsed" data-toggle="collapse"
+                            data-target="#collapseTermine2020" role="button"
+                            aria-expanded="false" aria-controls="collapseTermine2020">
+                            <th colSpan={4}>
+                                <span>2020</span>
+                                <i className="fa fa-chevron-down pull-right"/>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody className="collapse" id="collapseTermine2020">
                         <tr className="clickable-row" data-href="http://www.mv-altenhof.at/">
                             <th scope="row">Freitag, 24. April</th>
                             <td>Maitanz Altenhof</td>
