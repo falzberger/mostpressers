@@ -183,18 +183,18 @@ export default function Home(props: any) {
                         </tr>
                         </thead>
                         <tbody>
-                        {// replace each event's date with a Date object
+                        {
                             props.events.events
-                                .map((event: any) => (
+                                .sort(((e1: any, e2: any) => e1.date.localeCompare(e2.date)))
+                                .map((event: any) => ( // replace each event's date with a Date object
                                     {
                                         ...event,
                                         date: new Date(parseInt(event.date.slice(0, 4)), parseInt(event.date.slice(5, 7)) - 1, parseInt(event.date.slice(8, 10)))
                                     }
                                 ))
-                                .sort(((e1: any, e2: any) => e1.date.toISOString().localeCompare(e2.date.toISOString())))
                                 .map((event: any) =>
                                     <tr className="clickable-row" data-href={event.link}
-                                        key={`${event.date}-${event.title}`}>
+                                        key={`${event.date.toISOString()}-${event.title}`}>
                                         <th scope="row">{event.date.toLocaleString('de-DE', {
                                             weekday: 'long',
                                             month: 'long',
@@ -202,7 +202,7 @@ export default function Home(props: any) {
                                         })}</th>
                                         <td>{event.title}</td>
                                         <td>{event.location}</td>
-                                        <td className="table-link">Mehr</td>
+                                        <td className="table-link">{event.link.length > 0 ? "Mehr" : ""}</td>
                                     </tr>
                                 )}
                         </tbody>
